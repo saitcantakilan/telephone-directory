@@ -1,23 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import List from './List';
 import Form from './Form';
 
 
 
-export class Contacts extends Component {
-    static propTypes = {
-        contacts: PropTypes.array.isRequired,
-        addContact: PropTypes.func
-    };
-  render() {
-    return (
+const Contacts = props =>      
       <div>
-        <List contacts={this.props.contacts}/>
-        <Form addContact={this.props.addContact} />
-      </div>
-    );
-  }
+        <List contacts={props.contacts}/>
+        <Form addContact={props.addContact} />
+      </div>;
+   
+
+Contacts.propTypes = {
+    contacts: PropTypes.array.isRequired,
+    addContact: PropTypes.func
 }
 
 export default Contacts;
