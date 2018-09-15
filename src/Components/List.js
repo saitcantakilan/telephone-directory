@@ -13,7 +13,9 @@ export class List extends Component {
  };
  
  onChangeFilterText = (e) => {
-
+    this.setState({
+        filterText: e.target.value
+    })
  }
 
   render() {
