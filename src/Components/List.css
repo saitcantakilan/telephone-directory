@@ -1,0 +1,68 @@
+input{
+    
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-indent: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;    
+    outline: none;
+    background-color: #7d5fff;
+    border: none;
+    color: #ffffff;
+    margin-bottom: 10px;
+
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
+}
+button{
+    margin-top:40px;
+    height: 50px;
+    width: 25%;
+    text-align: center;
+    line-height: 50px;    
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;    
+    outline: none;
+    background-color: #3d3d3d;
+    border: none;
+    color: #ffffff;
+    
+
+}
+
+.listArea{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.list li{
+    padding: 10px; 
+    margin-left: 20px;
+    background-color: #4b4b4b;
+    border-bottom: solid 1px #ffffff;
+    border-radius: 20px;
+    text-indent: 20px;
+    color: #fff;
+    width: 75%;
+}
+
+.list li span{
+    display: block;
+}
+.list li span.phone{
+    float: right;
+    padding-right: 20px;
+    
+}
+.list li span.name{
+    float: left;
+}
+.clearFix{
+    clear: both;
+}
