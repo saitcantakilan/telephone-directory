@@ -1,24 +1,36 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../App.css';
 
 import Contacts from './Contacts';
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.addContact = this.addContact.bind(this);
+  }
   state = {
     contacts: [{
         name: 'Saitcan',
         phone: '123456789'
     }, {
         name: 'Esra',
-        phone: '123456789'
+        phone: '0123456789'
     }]
   };
+
+  addContact(contact){
+    const { contacts } = this.state;
+    contacts.push(contact);
+
+    this.setState({
+      contacts
+    });
+  }
 
   render() {
     return (
       <div className="App">
       <h1>Telephone Directory App</h1>
-       <Contacts contacts={this.state.contacts} />
+       <Contacts addContact={this.addContact} contacts={this.state.contacts} />
       </div>
     );
   }
